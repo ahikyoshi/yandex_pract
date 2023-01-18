@@ -9,6 +9,10 @@ app.use('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
+app.get('/helloworld', (req,res) => {
+    res.send('hello')
+})
+
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}!`);
 });
